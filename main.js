@@ -1,11 +1,61 @@
-const $input1 = document.querySelector('#num1');
-const $input2 = document.querySelector('#num2');
+const $input = document.querySelector('#input');
 const $result = document.querySelector('#h2')
 
-function sumar() {
-    const valor1 = Number($input1.value);
-    const valor2 = Number($input2.value);
-    const resultado = valor1 + valor2;
-    $result.innerHTML = `Resultado: ${resultado}`
+function calcular() {
+    const input = $input.value;
+
+    try {
+        const operacion = input.split(/(\+|\-|\x|\*|\÷|\/)/, 3)
+
+        const a = Number(operacion[0])
+        const b = Number(operacion[2])
+        const operador = operacion[1]
+
+        let resultado = 0;
+
+        switch (operador) {
+            case '+':
+                resultado = a + b
+                break;
+
+            case '-':
+                resultado = a - b
+                break;
+
+            case 'x':
+                resultado = a * b
+                break;
+
+            case '*':
+                resultado = a * b
+                break;
+
+            case '÷':
+                resultado = a / b
+                break;
+
+            case '/':
+                resultado = a / b
+                break;
+        
+            default:
+                throw new Error('Operador invalido')
+        }
+
+        $result.innerHTML = `Resultado: ${resultado}`
+    } catch (error) {
+        $result.innerHTML = 'Error: Operacion incorrecta'
+    }
 }
 
+function teclar(tecla) {
+    $input.value += tecla
+}
+
+function borrar(tecla) {
+    if (tecla === 'CE') {
+        $input.value = ''
+    } else {
+        $input.value = $input.value.slice(0, -1)
+    }
+}

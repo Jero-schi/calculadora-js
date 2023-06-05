@@ -8,10 +8,36 @@
 </head>
 <body>
     <h1>Calculadora</h1>
-    <input type="number" name="num" id="num1">
-    <input type="number" name="num" id="num2">
-    <button onclick="sumar()">Sumar</button>
-    <h2 id="h2">Resultado:</h2>
+    <input name="num" id="input">
+
+    <button onclick="calcular()">=</button>
+
+    <div class="operadores">
+        <button onclick="teclar('÷')">÷</button>
+        <button onclick="teclar('x')">x</button>
+        <button onclick="teclar('-')">-</button>
+        <button onclick="teclar('+')">+</button>
+    </div>
+
+    <div class="numeros">
+        <button onclick="teclar('1')">1</button>
+        <button onclick="teclar('2')">2</button>
+        <button onclick="teclar('3')">3</button>
+        <button onclick="teclar('4')">4</button>
+        <button onclick="teclar('5')">5</button>
+        <button onclick="teclar('6')">6</button>
+        <button onclick="teclar('7')">7</button>
+        <button onclick="teclar('8')">8</button>
+        <button onclick="teclar('9')">9</button>
+        <button onclick="teclar('0')">0</button>
+    </div>
+
+    <div class="borradores">
+        <button onclick="borrar('CE')">CE</button>
+        <button onclick="borrar('C')">C</button>
+    </div>
+    
+    <h2 id="h2">Resultado: </h2>
 </body>
 
 <script src="main.js"></script>
