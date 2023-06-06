@@ -4,40 +4,41 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+
+    <link rel="stylesheet" href="style.css">
+    <title>Calculadora</title>
 </head>
 <body>
-    <h1>Calculadora</h1>
-    <input name="num" id="input">
 
-    <button onclick="calcular()">=</button>
+    <main>
+        <section>
+            <input name="num" id="input" placeholder="0">
 
-    <div class="operadores">
-        <button onclick="teclar('÷')">÷</button>
-        <button onclick="teclar('x')">x</button>
-        <button onclick="teclar('-')">-</button>
-        <button onclick="teclar('+')">+</button>
-    </div>
+            <div class="botones">
+                <button class="boton borradores" onclick="borrar('CE')">CE</button>
+                <button class="boton borradores" onclick="borrar('C')">C</button>
+                <button class="boton" onclick="teclar('÷')">÷</button>
+                <button class="boton" onclick="teclar('7')">7</button>
+                <button class="boton" onclick="teclar('8')">8</button>
+                <button class="boton" onclick="teclar('9')">9</button>
+                <button class="boton" onclick="teclar('x')">x</button>
+                <button class="boton" onclick="teclar('4')">4</button>
+                <button class="boton" onclick="teclar('5')">5</button>
+                <button class="boton" onclick="teclar('6')">6</button>
+                <button class="boton" onclick="teclar('-')">-</button>
+                <button class="boton" onclick="teclar('1')">1</button>
+                <button class="boton" onclick="teclar('2')">2</button>
+                <button class="boton" onclick="teclar('3')">3</button>
+                <button class="boton" onclick="teclar('+')">+</button>
+                <button class="boton cero" onclick="teclar('0')">0</button>
+                <button class="boton" onclick="calcular()">=</button>
+            </div>
+        </section>
+        
 
-    <div class="numeros">
-        <button onclick="teclar('1')">1</button>
-        <button onclick="teclar('2')">2</button>
-        <button onclick="teclar('3')">3</button>
-        <button onclick="teclar('4')">4</button>
-        <button onclick="teclar('5')">5</button>
-        <button onclick="teclar('6')">6</button>
-        <button onclick="teclar('7')">7</button>
-        <button onclick="teclar('8')">8</button>
-        <button onclick="teclar('9')">9</button>
-        <button onclick="teclar('0')">0</button>
-    </div>
+    </main>
 
-    <div class="borradores">
-        <button onclick="borrar('CE')">CE</button>
-        <button onclick="borrar('C')">C</button>
-    </div>
-    
-    <h2 id="h2">Resultado: </h2>
+    <h2 id="h2">Resultado: </h2>    
 </body>
 
 <script src="main.js"></script>

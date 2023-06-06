@@ -1,0 +1,71 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(35, 35, 80);
+}
+
+main {
+    width: 100vw;
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+section {
+    background-color: bisque;
+
+    width: 30vw;
+    height: 70vh;
+
+    border-radius: 10px;
+
+    display: flex;
+    flex-direction: column;
+}
+
+section input {
+    width: 100%;
+    height: 25%;
+}
+
+section .botones {
+    display: grid; 
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+
+    width: 100%;
+    height: 75%;
+}
+
+section .botones .boton {
+    font-size: 1.5rem;
+
+    padding: 5px;
+
+    background-color: white;
+    border: 1px solid rgb(182, 181, 181);
+
+    grid-column: span 2;
+}
+
+section .botones .borradores {
+    background-color: bisque;
+    grid-column: span 3;
+}
+
+section .botones .boton:nth-child(3) {
+    grid-column: auto / span 2;
+}
+
+section .botones .cero {
+    background-color: bisque;
+    grid-column: span 6;
+
+}
+
