@@ -6,39 +6,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Copse&display=swap" rel="stylesheet">
     <title>Calculadora</title>
 </head>
 <body>
 
     <main>
         <section>
-            <input name="num" id="input" placeholder="0">
+            <div class="operacion">
+                <input name="num" id="input" placeholder="0">
+            </div>
 
             <div class="botones">
                 <button class="boton borradores" onclick="borrar('CE')">CE</button>
                 <button class="boton borradores" onclick="borrar('C')">C</button>
-                <button class="boton" onclick="teclar('÷')">÷</button>
+                <button class="boton operadores" onclick="teclar('÷')">÷</button>
                 <button class="boton" onclick="teclar('7')">7</button>
                 <button class="boton" onclick="teclar('8')">8</button>
                 <button class="boton" onclick="teclar('9')">9</button>
-                <button class="boton" onclick="teclar('x')">x</button>
+                <button class="boton operadores" onclick="teclar('x')">x</button>
                 <button class="boton" onclick="teclar('4')">4</button>
                 <button class="boton" onclick="teclar('5')">5</button>
                 <button class="boton" onclick="teclar('6')">6</button>
-                <button class="boton" onclick="teclar('-')">-</button>
+                <button class="boton operadores" onclick="teclar('-')">-</button>
                 <button class="boton" onclick="teclar('1')">1</button>
                 <button class="boton" onclick="teclar('2')">2</button>
                 <button class="boton" onclick="teclar('3')">3</button>
-                <button class="boton" onclick="teclar('+')">+</button>
+                <button class="boton operadores" onclick="teclar('+')">+</button>
                 <button class="boton cero" onclick="teclar('0')">0</button>
                 <button class="boton" onclick="calcular()">=</button>
             </div>
         </section>
         
 
-    </main>
-
-    <h2 id="h2">Resultado: </h2>    
+    </main> 
 </body>
 
 <script src="main.js"></script>

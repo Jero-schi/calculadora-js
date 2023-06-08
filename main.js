@@ -1,5 +1,5 @@
 const $input = document.querySelector('#input');
-const $result = document.querySelector('#h2')
+const $result = document.querySelector('#resultado')
 
 function calcular() {
     const input = $input.value;
@@ -42,9 +42,9 @@ function calcular() {
                 throw new Error('Operador invalido')
         }
 
-        $result.innerHTML = `Resultado: ${resultado}`
+        $input.value = resultado
+        $result.innerHTML = resultado
     } catch (error) {
-        $result.innerHTML = 'Error: Operacion incorrecta'
     }
 }
 
@@ -55,7 +55,9 @@ function teclar(tecla) {
 function borrar(tecla) {
     if (tecla === 'CE') {
         $input.value = ''
+        $result.textContent = '0'
     } else {
         $input.value = $input.value.slice(0, -1)
+        $result.textContent = '0'
     }
 }

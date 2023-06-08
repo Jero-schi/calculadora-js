@@ -1,3 +1,15 @@
+/* paleta {
+    azulito: #355070;
+    lila: #6D597A;
+    rosa oscuro: #B56576;
+    rosa claro: #E56B6F;
+    cremita: #EAAC8B
+    azul: #023047
+    amarillor: #ffb703
+} */
+
+
+
 * {
     padding: 0;
     margin: 0;
@@ -5,7 +17,8 @@
 }
 
 body {
-    background-color: rgb(35, 35, 80);
+    background-image: radial-gradient(circle at 29.52% 14.52%, #ade5ff 0, #7dcefb 25%, #3cb5f2 50%, #009ce9 75%, #0085e0 100%);
+    font-family: 'Copse', serif;
 }
 
 main {
@@ -18,26 +31,50 @@ main {
 }
 
 section {
-    background-color: bisque;
+    background-color: #6d597a46;
 
-    width: 30vw;
-    height: 70vh;
+    width: 25vw;
+    height: 90vh;
 
-    border-radius: 10px;
+    padding: 16px;
+
+    border-radius: 45px;
 
     display: flex;
     flex-direction: column;
 }
 
-section input {
+section .operacion {
     width: 100%;
     height: 25%;
+
+    padding: 16px 24px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: end;
+    gap: 14px;
+}
+
+section .operacion input {
+    width: 100%;
+    background: none;
+    border: none;
+
+    color: #0b4b6b;
+    text-align: end;
+    font-size: 2.5rem;
+    font-family: 'Copse', serif;
 }
 
 section .botones {
     display: grid; 
     grid-template-columns: repeat(8, 1fr);
     grid-template-rows: repeat(5, 1fr);
+    gap: 12px;
+
+    padding: 0px 8px 8px 8px;
 
     width: 100%;
     height: 75%;
@@ -45,17 +82,31 @@ section .botones {
 
 section .botones .boton {
     font-size: 1.5rem;
+    font-family: 'Copse', serif;
 
-    padding: 5px;
+    background-color: #0b4b6b;
+    box-shadow: 1px 3px 8px 0px rgba(12,27,105,0.6);
+    border: none;
+    border-radius: 20px;
 
-    background-color: white;
-    border: 1px solid rgb(182, 181, 181);
+    width: 100%;
+    height: 100%;
+
+    color: #ade8f4;
 
     grid-column: span 2;
 }
 
+section .botones .operadores {
+    font-size: 1.8rem;
+}
+
+section .botones .operadores:nth-child(11) {
+    font-size: 2rem;
+}
+
 section .botones .borradores {
-    background-color: bisque;
+    background-color: #219ebc;
     grid-column: span 3;
 }
 
@@ -64,8 +115,12 @@ section .botones .boton:nth-child(3) {
 }
 
 section .botones .cero {
-    background-color: bisque;
     grid-column: span 6;
+    
+}
+
+section .botones .boton:last-child {
+    background-color: #219ebc;
 
 }
 
