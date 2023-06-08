@@ -34,7 +34,9 @@ section {
     background-color: #6d597a46;
 
     width: 25vw;
+    max-width: 400px;
     height: 90vh;
+    max-height: 700px;
 
     padding: 16px;
 
@@ -124,3 +126,53 @@ section .botones .boton:last-child {
 
 }
 
+@media(max-width: 1280px) {
+    section {
+        width: 35vw;
+    }
+}
+
+@media(max-width: 1000px) {
+    section {
+        width: 55vw;
+        max-width: 500px;
+        max-height: 900px;
+    }
+    section .operacion input {
+        font-size: 3.5rem;
+    }
+    section .botones .boton {
+        font-size: 2.5rem;
+    }
+    section .botones .operadores {
+        font-size: 2.8rem;
+    }
+    section .botones .operadores:nth-child(11) {
+        font-size: 3rem;
+    }
+}
+
+@media(max-width: 700px) {
+    section {
+        height: 80vh;
+    }
+    section .operacion input {
+        font-size: 2.5rem;
+    }
+    section .botones .boton {
+        font-size: 1.5rem;
+    }
+    section .botones .operadores {
+        font-size: 1.8rem;
+    }
+    section .botones .operadores:nth-child(11) {
+        font-size: 2rem;
+    }
+}
+
+@media(max-width: 450px) {
+    section {
+        width: 80vw;
+        height: 70vh;
+    }
+}
