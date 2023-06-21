@@ -70,6 +70,10 @@ section .operacion input {
     font-family: 'Copse', serif;
 }
 
+input:focus {
+    outline: none;
+}
+
 section .botones {
     display: grid; 
     grid-template-columns: repeat(8, 1fr);
@@ -97,6 +101,10 @@ section .botones .boton {
     color: #ade8f4;
 
     grid-column: span 2;
+}
+
+section .botones .boton:focus {
+    outline: none;
 }
 
 section .botones .operadores {
