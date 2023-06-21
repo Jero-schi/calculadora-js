@@ -44,6 +44,15 @@ section {
 
     display: flex;
     flex-direction: column;
+
+    animation: calculadora .6s ease-out both;
+}
+
+@keyframes calculadora {
+    from {
+        width: 15vw;
+        height: 60vh;
+    }
 }
 
 section .operacion {
@@ -101,6 +110,18 @@ section .botones .boton {
     color: #ade8f4;
 
     grid-column: span 2;
+
+    transition: all .4s ease;
+}
+
+section .botones .boton:hover {
+    background-color: #0e5d85;
+    color: #bcf4ff;
+    box-shadow: 1px 3px 10px 1px rgba(12,27,105,0.6);
+
+    font-size: 1.7rem;
+
+    transform: scale(1.1);
 }
 
 section .botones .boton:focus {
@@ -120,6 +141,16 @@ section .botones .borradores {
     grid-column: span 3;
 }
 
+section .botones .borradores:hover {
+    background-color: #28adce;
+    color: #bcf4ff;
+    box-shadow: 1px 3px 10px 1px rgba(12,27,105,0.6);
+
+    font-size: 1.7rem;
+    
+    transform: scale(1.1);
+}
+
 section .botones .boton:nth-child(3) {
     grid-column: auto / span 2;
 }
@@ -132,6 +163,21 @@ section .botones .cero {
 section .botones .boton:last-child {
     background-color: #219ebc;
 
+    animation: botones .8s ease-out both;
+}
+
+@keyframes botones {
+    from {
+        background-color: #219ebc;
+    }
+
+    80% {
+        background-color: #4eaad8;
+    }
+
+    to {
+        background-color: #219ebc;
+    }
 }
 
 @media(max-width: 1280px) {
